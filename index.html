@@ -258,6 +258,12 @@ main{max-width:1040px}
 .code{font-size:.72rem;color:var(--text-dim)}
 .code b{color:var(--cyan)}
 
+.desc-toggle{background:none;border:none;color:var(--cyan);font-size:.78rem;font-weight:700;cursor:pointer;padding:6px 0 0;display:flex;align-items:center;gap:5px;font-family:var(--font-body)}
+.desc-toggle:hover{text-decoration:underline}
+.desc-toggle .chevron{display:inline-block;transition:transform .2s;font-size:.7rem}
+.desc-toggle.open .chevron{transform:rotate(180deg)}
+.desc-panel{display:none;color:var(--text-dim);font-size:.85rem;line-height:1.55;margin-top:8px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
+
 .trust{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:70px 0;color:var(--text-dim);font-size:.9rem}
 .trust span{display:flex;align-items:center;gap:8px}
 .trust b{color:var(--text)}
@@ -310,7 +316,7 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
   </div>
 
   <div class="stat-strip">
-    <div><b>7</b><span>Casinos Reviewed</span></div>
+    <div><b>8</b><span>Casinos Reviewed</span></div>
     <div><b>$1,000</b><span>Top Bonus</span></div>
     <div><b>24hr</b><span>Avg Payout</span></div>
     <div><b>4.7★</b><span>Avg Rating</span></div>
@@ -323,6 +329,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>Swiss Casinos <span class="badge">Editor's Pick</span></h3>
         <div class="stars">★★★★★</div>
         <div class="bonus">Play 10 rounds and get a 25 CHF sign-up bonus</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">The online casino platform of the Swiss Casinos group, licensed under Switzerland's Federal Gaming Act and available to players in Switzerland. Offers slots, table games, and live dealer games through the country's regulated online gambling framework.</div>
       </div>
       <div class="cta-col"><a class="btn" href="https://online.swisscasinos.ch/register?referrer=X0SV2ug%2BZ7ta4nTTqUWjRntwGg9w%3D%3D" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'Swiss Casinos'});">Claim Bonus</a></div>
     </div>
@@ -332,6 +340,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>Swiss4Win</h3>
         <div class="stars">★★★★★</div>
         <div class="bonus">Sign up and get 50 free spins</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">The online casino platform operated by Casinò Lugano, one of Switzerland's licensed land-based casinos, offering slots and live casino games to players under Switzerland's regulated online gambling framework.</div>
       </div>
       <div class="cta-col"><a class="btn" href="https://registrieren.swiss4win.ch/de?referrer=X0dvn216ihAIaglTUMqVYMKwHQUw%3D%3D" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'Swiss4Win'});">Claim Bonus</a></div>
     </div>
@@ -341,6 +351,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>SpinRoyal</h3>
         <div class="stars">★★★★★</div>
         <div class="bonus">200% match up to $1,000 + 50 free spins</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">A slots-focused online casino known for high-value welcome bonuses and a wide selection of video slots.</div>
       </div>
       <div class="cta-col"><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'SpinRoyal'});">Claim Bonus</a><span class="code">Code: <b>NOVA200</b></span></div>
     </div>
@@ -350,6 +362,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>GoldenTilt</h3>
         <div class="stars">★★★★☆</div>
         <div class="bonus">150% match up to $750, fast crypto payouts</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">An online casino offering fast crypto payouts alongside a solid range of table games and slots.</div>
       </div>
       <div class="cta-col"><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'GoldenTilt'});">Claim Bonus</a><span class="code">Code: <b>GOLD150</b></span></div>
     </div>
@@ -359,6 +373,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>VegasVolt</h3>
         <div class="stars">★★★★☆</div>
         <div class="bonus">100% match up to $500 + 100 free spins</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">A Vegas-styled online casino with classic slots, blackjack, and roulette, plus a generous first-deposit match.</div>
       </div>
       <div class="cta-col"><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'VegasVolt'});">Claim Bonus</a><span class="code">Code: <b>VOLT100</b></span></div>
     </div>
@@ -368,6 +384,8 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>NeonJack</h3>
         <div class="stars">★★★★☆</div>
         <div class="bonus">Weekly 15% cashback, no wagering on cashback</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">An online casino known for its weekly cashback program with no wagering requirements on cashback earnings.</div>
       </div>
       <div class="cta-col"><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'NeonJack'});">Claim Bonus</a><span class="code">Code: <b>JACK15</b></span></div>
     </div>
@@ -377,8 +395,21 @@ footer{position:relative;z-index:2;text-align:center;padding:30px 6%;border-top:
         <h3>WildStreak</h3>
         <div class="stars">★★★☆☆</div>
         <div class="bonus">Deposit-free $20 trial credit for new players</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">A newer online casino offering a no-deposit trial credit for players who want to test the platform risk-free.</div>
       </div>
       <div class="cta-col"><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'WildStreak'});">Claim Bonus</a><span class="code">Code: <b>TRY20</b></span></div>
+    </div>
+    <div class="card">
+      <div class="rank">8</div>
+      <div class="info">
+        <h3>WinPlace777</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="bonus">Sign up through our partner link</div>
+        <button class="desc-toggle" onclick="toggleDesc(this)">What is this site? <span class="chevron">▾</span></button>
+        <div class="desc-panel">An international online casino and sportsbook offering slots, live dealer games, and sports betting, with crypto and card payment options plus weekly cashback promotions.</div>
+      </div>
+      <div class="cta-col"><a class="btn" href="https://winplace.live?ref_code=nUA3RvxbxP" rel="sponsored nofollow noopener" target="_blank" onclick="gtag('event','claim_bonus_click',{'casino_name':'WinPlace777'});">Claim Bonus</a></div>
     </div>
   </div>
 
@@ -415,6 +446,13 @@ for(let i=0;i<10;i++){
   s.style.animationDelay=(Math.random()*10)+'s';
   s.style.fontSize=(14+Math.random()*12)+'px';
   conf.appendChild(s);
+}
+
+function toggleDesc(btn){
+  var panel = btn.nextElementSibling;
+  var isOpen = panel.style.display === 'block';
+  panel.style.display = isOpen ? 'none' : 'block';
+  btn.classList.toggle('open', !isOpen);
 }
 </script>
 
